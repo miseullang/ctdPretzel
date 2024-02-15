@@ -1,0 +1,768 @@
+/* 아이패드 프로 1366*1024 */
+@media all and (min-width : 1367px) {
+    .mo_wrap{
+        display: none;
+    }
+    
+    .wrap{
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .main_header{
+        width: 100%;
+        height: 80px;
+        border-top: 1px solid black;
+        background-color: #ffffff;
+        box-sizing: border-box; 
+        position: relative;
+        z-index: 999;
+    }
+    .main_img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .main_pret{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    @keyframes icon_ani{
+        0%{
+            transform: translate(0) rotate(0);
+        }
+        25%{
+            transform: translate(2px, 1px) rotate(2deg);
+        }
+        50%{
+            transform: translate(3px, 2px) rotate(4deg);
+        }
+        75%{
+            transform: translate(1px, 1px) rotate(1deg);
+        }
+        100%{
+            transform: translate(-1px, -3px) rotate(-2deg);
+        }
+        
+    }
+    @keyframes heart{
+        0%{
+            transform: scale(1, 1) translate(0%, 0%);
+            }
+            4%{
+            transform: scale(0.95, 1.05) translate(0%, 5%);
+            }
+            8%{
+                transform: scale(1.05, 0.9) translate(0%, 10%);
+            }
+            12%{
+                transform: scale(0.9, 1.05) translate(0%, -10%);
+            }
+            16%{
+                transform: scale(1.05, 0.95) translate(0%, 5%);
+            }
+            20%{
+            transform: scale(1, 1) translate(0%, 0%);
+            }
+            100%{
+            transform: scale(1, 1) translate(0%, 0%);
+            }
+    }
+    
+    .main_font{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    
+    .icon_img{
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        animation: icon_ani 1.2s step-start 0s infinite normal forwards;
+    }
+    .pack_butter{
+        width: 90px;
+        height: 90px;
+    }
+    /* 2페이지 어바웃 */
+    .about_page{
+        position: relative;
+    }
+    .about_box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ffda69;
+        overflow: hidden;
+        clip-path: circle(0 at 50% 50%);
+    }
+    .about_title{
+        font-weight: 400;
+        font-family: SangSangShinb7;
+        font-size: 11.25em;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        color: #ffffff;
+    }
+    .about_txt_wrapper{
+        width: 800px;
+        height: 600px;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        margin-top: -300px;
+        margin-left: -350px;
+    }
+    .about_txt{
+        width: 670px;
+        margin-bottom: 15px;
+    }
+    .profile{
+        height: 100px;
+    }
+    .profile .title_icon{
+        animation: heart 2.5s linear 0s infinite;
+    }
+    .education{
+        width: 100%;
+        height: 150px;
+    }
+    .education .title_icon{
+        animation: heart 2.5s linear 0.5s infinite;
+    }
+    .license{
+        height: 300px;
+    }
+    .license .title_icon{
+        animation: heart 2.5s linear 1s infinite;
+    }
+    .title_icon{
+        float: left;
+        width: 50px;
+        height: 40px;
+        margin-top: 10px;
+    }
+    .sub_title{
+        width: 600px;
+        height: 50px;
+        float: left;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        font-family: SangSangShinb7;
+        font-size: 3em;
+        font-weight: 500;
+    }
+    .sub_title~p span{
+        font-weight: 500;
+        margin-right: 10px;
+    
+    }
+    .about_txt p{
+        width: 100%;
+        float: right;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 300;
+        font-size: 1.25em;
+        line-height: 35px;
+    }
+    
+    /* 스킬 페이지 */
+    .skills_page{
+        background-color: #ded7cd;
+        padding: 80px;
+        box-sizing: border-box;
+    }
+    /* 왼쪽 일러스트+타이틀 박스 */
+    .skill_logo_box{
+        width: 250px;
+        height: 400px;
+        float: left;
+    }
+    .skill_logo_box img{
+        height: 300px;
+        object-fit: contain;
+    }
+    .skill_txt{
+        height: 50px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 6.25rem;
+        font-family: SangSangShinb7;
+    }
+    /* 오른쪽 탭메뉴+아이콘 */
+    .skill_grid{
+        width: calc(100% - 250px); height: 100%;
+        float: right;
+    }
+    /* 메뉴바 */
+    .skill_page_tab_menu{
+        width: 100%; height: 80px;
+        display: flex; justify-content: space-evenly;
+        margin-bottom: 15px;
+    }
+    .skill_menu{
+        text-align: center; font-size: 6.25em; font-family: SangSangShinb7;
+        line-height: 80px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .skill_menu:hover::before {
+        width: 130%;
+    }
+    .skill_menu::before {
+        content: "";
+        display: block;
+        position: absolute; left: -15%; bottom: 0; z-index: 0;
+        width: 0; height: 90%; font-weight: 300;
+        transition: width 0.5s;
+        background-color: #ffda69;
+    }
+    .skill_menu span {
+        position: relative;
+        z-index: 1;
+    }
+    /* 메뉴 하단 콘텐츠 영역 */
+    .skill_page_tab_con_wrap{
+        position: relative; width: 100%; height: calc(100% - 80px);
+    }
+    .skill_page_tab_con{
+        display: flex; justify-content: center; align-items: center;
+        flex-wrap: wrap;
+        width: 100%; height: 100%;
+        position: absolute; top: 0; left: 0;
+        padding: 40px; box-sizing: border-box;
+    }
+    .skill_box{
+        width: 350px; height: 250px ;
+        box-sizing: border-box;
+        margin: 20px;
+        position: relative;
+        transition: 0.5s;
+    }
+    .skill_box:hover .skill_icon{
+        animation: icon 2.5s linear infinite;
+    }
+    .skill_top_txt{
+        height: 30px;
+        font-family: SangSangShinb7;
+        font-size: 3em;
+        font-weight: 500;
+        margin-left: 15px;
+        transform: rotate(-20deg);
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+    .skill_icon{
+        width: 50%;
+        height: 50%;
+        object-fit: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -20%;
+        margin-left: -25%;
+    }
+    .skill_name{
+        width: 100%;
+        height: 50px;
+        font-family: SangSangShinb7;
+        font-size: 4em;
+        font-weight: 500;
+        text-align: center;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+    }
+    
+    @keyframes icon{
+        1%{
+            transform: rotate(-15deg);
+        }
+        3%{
+            transform: rotate(0);
+        }
+        5%{
+            transform: rotate(-15deg);
+        }
+        8%{
+            transform: rotate(0);
+        }
+        10%{
+            transform: rotate(0);
+        }
+        100%{
+            transform: rotate(0);
+        }
+    }
+    
+    /* 3페이지 포트폴리오 */
+    .portfolio_page{
+        padding: 10px;
+        box-sizing: border-box;
+        /* overflow: hidden; */
+    }
+    .menu_but{
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 999;
+    }
+    
+    /* 클릭후 열리는 메뉴 숨김메뉴 */
+    .page_blur{
+        filter: blur(2px);
+    }
+    .page_filter{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9998;
+        background-color: #ffffff;
+        opacity: 0.8;
+        display: none;
+    }
+    .hide_menu{
+        background-color: #26468e;
+        border-radius: 15px;
+        opacity: 1;
+        display: none;
+        z-index: 9999;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+    }
+    .hide_menu .menu_but{
+        width: 100px;
+    }
+    .close_but{
+        width: 40px;
+        height: 30px;
+        z-index: 9999;
+        float: left;
+        object-fit: contain;
+        display: none;
+    }
+    .close_txt{
+        float: right;
+        width: 50px;
+        height: 20px;
+        font-size: 1.25em;
+        font-weight: 100;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .hide_menu_wrap{
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px;
+        margin-left: -200px;
+    }
+    .hide_menu_box{
+        width: 400px;
+        height: 100px;
+        margin-bottom: 25px;
+        /* background-color: aquamarine; */
+    }
+    .hide_top_menu{
+        display: block;
+        width: 300px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 3.5em; font-weight: 300;
+        text-align: left;
+        color: #ffffff;
+        margin-left: 50px;
+        /* background-color: aqua; */
+    }
+    .arrow_icon{
+        transition-duration: 0.4s;
+    }
+    .hide_top_menu:hover{
+        width: 300px;
+        color: #ffda69;
+        float: right;
+        text-align: left;
+        margin-left: 0;
+    }
+    .arrow_box{
+        height: 100px;
+    }
+    .arrow{
+        background: url(../img/arrowMAIN.png);
+        background-size: 60px 60px;
+        background-position: 80% 50%;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+    .min_logo{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+    }
+    .pret_box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        /* background-color: bisque; */
+    }
+    .pretzel{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition-duration: 0.3s;
+        z-index: 3;
+    }
+    .almond{
+        rotate: 60deg;
+    }
+    .choco{
+        rotate: -60deg;
+    }
+    .parts{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        transition-duration: 0.3s;
+    }
+    .pink_box>.parts{
+        left: -150px;
+        bottom: 0;
+    }
+    .almond_box>.parts{
+        top: -50px;
+        right: -150px;
+    }
+    .tomato_box>.parts{
+        top: 0;
+        right: -150px;
+    }
+    .choco_box>.parts{
+        top: 0;
+        left: -150px;
+    }
+    .pink:hover~.berry{
+        bottom: 10px;
+        left: 400px;
+        rotate: 50deg;
+    }
+    .pink:hover~.berry_1{
+        width: 60px;
+        height: 60px;
+        bottom: 10px;
+        left: 10px;
+    }
+    .pink:hover~.berry_2{
+        bottom: 10px;
+        left: 70px;
+        rotate: 70deg;
+    }
+    .almond:hover~.parts_butter{
+        width: 90px;
+        height: 70px;
+        top: 40px;
+        right: 400px;
+    }
+    .almond:hover~.parts_sugar{
+        top: 50%;
+        right: 450px;
+    }
+    .almond:hover~.parts_sugar_1{
+        top: 30px;
+        right: 50px;
+    }
+    .almond:hover~.parts_almond{
+        width: 120px;
+        height: 140px;
+        top: 300px;
+        right: 350px;
+    }
+    .tomato:hover~.parts_tomato{
+        width: 60px;
+        height: 60px;
+        top: 120px;
+        right: 20px;
+    }
+    .tomato:hover~.parts_tomato_1{
+        top: 20px;
+        right: 300px;
+        rotate: 90deg;
+    }
+    .tomato:hover~.basil{
+        width: 20px;
+        top: 160px;
+        right: 20px;
+        rotate: 90deg;
+    }
+    .tomato:hover~.basil_1{
+        width: 40px;
+        height: 60px;
+        top: 300px;
+        right: 350px;
+    }
+    .choco:hover~.parts_choco{
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        left: 60px;
+    }
+    .choco:hover~.parts_choco_1{
+        width: 70px;
+        height: 70px;
+        top: 170px;
+        left: 450px;
+        rotate: 50deg;
+    }
+    .choco:hover~.parts_been{
+        top: 80px;
+        left: 40px;
+    }
+    .choco:hover~.parts_been_1{
+        width: 30px;
+        height: 30px;
+        top: 250px;
+        left: 450px;
+        rotate: 50deg;
+    }
+    .pretzel:hover{
+        transform: scale(1.2);
+    }
+    .mid_parts{
+        position: absolute;
+        width: 50px; height: 50px;
+        z-index: 5;
+        animation: icon_ani 1.2s step-start 0s infinite normal forwards;
+    }
+    .mid_parts_1{
+        width: 80px; height: 80px;
+        top: 20%; left: 60%;
+    }
+    .mid_parts_2{
+        bottom: 20%; left: 65%;
+    }
+    .mid_parts_3{
+        bottom: 18%; left: 70%;
+    }
+    .mid_parts_4{
+        top: 40%; left: 15%;
+    }
+    /* addClass */
+    .berry_class{
+        background: url(../img/parts_berryMAIN.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .almond_class{
+        background: url(../img/parts_almondMAIN.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .tomato_class{
+        background: url(../img/parts_tomatoMAIN.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .choco_class{
+        background: url(../img/parts_chocoMAIN.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    /* 글자 움직이기 */
+    .pc_mask{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        overflow: hidden;
+    }
+    .move_box{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .port_box{
+        height: 100%;
+        float: left;
+    }
+    .port_txt{
+        width: 800px;
+        height: 100%; 
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .port_type{
+        width: 100%;
+        height: 60px;
+        font-family: SangSangShinb7;
+        font-size: 6em;
+        text-align: center;
+        font-weight: 600;
+    }
+    .txt_pretzel{
+        width: 100%;
+        height: 80px;
+        font-family: SangSangShinb7;
+        font-size: 7.5em;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .prev_box{
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .pc_prev_box{
+        width: 65%;
+        height: 100%;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+    .site_preview_move_box{
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .explain_txt{
+        width: 35%;
+        height: 100%;
+        float: left;
+    }
+    .explain_title{
+        width: 100%;
+        height: 50px;
+        font-size: 2em;
+        font-family: SangSangShinb7;
+    }
+    .explain_con{
+        padding: 20px 30px;
+        box-sizing: border-box;
+        line-height: 30px;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .explain_con mark{
+        background-color: #ffda69;
+        font-weight: 600;
+        font-family: inherit;
+    }
+    
+    /* last_page 엔딩페이지*/
+    .last_page{
+        background-color: #ffffff;
+    }
+    .last_txt_box{
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        top: 50%;
+        margin-top: -200px;
+    }
+    .ending_title{
+        width: 100%;
+        height: 100px;
+        font-family: SangSangShinb7;
+        font-size: 6em;
+        text-align: center;
+        font-weight: 500;
+    }
+    .end_con{
+        width: 100%;
+        height: 300px;
+        font-family: SangSangShinb7;
+        font-size: 3em;
+        line-height: 60px;
+        text-align: center;
+        font-weight: 500;
+        transition: 0.5s;
+    }
+    .end_con span{
+        /* background-color: #ffda69; */
+        position: relative;
+        z-index: 2;
+        
+    }
+    .end_con span::before {
+        content: "";
+        /* display: block; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 0;
+        height: 100%;
+        transition: width 0.5s;
+        background-color: #ffda69;
+    }
+    .last_page span::before{
+        width: 100%;
+    }
+    
+    /* 엔딩페이지 푸터 */
+    footer{
+        background-color: #26468e;
+        color: #ffffff;
+        font-family: SangSangShinb7;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+    }
+    .footer_txt_box{
+        width: 100%;
+        height: 150px;
+        text-align: center;
+    }
+    .contact{
+        font-size: 4.3em;
+    }
+    .contact_con{
+        font-size: 2.5em;
+    }
+    .port_plan_shortcut{
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .port_plan_shortcut img{
+        width: 40px;
+        height: 35px;
+        /* margin-right: 10px; */
+        animation: heart 2.5s linear 1s infinite;
+    }
+    .copyright{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 100;
+        position: absolute;
+        bottom: 0;
+    }
+    
+}
